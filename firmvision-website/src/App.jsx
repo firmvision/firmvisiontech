@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cable, Camera, Wifi, Server, ShieldCheck, MapPin, Phone, Mail, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Cable, Camera, Wifi, Server, ShieldCheck, MapPin, Phone, Mail, ArrowRight, CheckCircle2, Monitor, GraduationCap } from "lucide-react";
 
 export default function App() {
   const services = [
@@ -23,6 +23,11 @@ export default function App() {
       icon: <Server className="w-8 h-8" />,
       title: "IPTV & Server Solutions",
       text: "IPTV platform installation, media server support, headend integration, streaming infrastructure and technical operations support."
+    },
+    {
+      icon: <Monitor className="w-8 h-8" />,
+      title: "Software Development",
+      text: "Custom web applications, CBT (Computer Based Testing) platforms, school management portals and enterprise software solutions tailored to your organisation."
     }
   ];
 
@@ -31,8 +36,10 @@ export default function App() {
     "OTDR testing and optical link verification",
     "Campus and enterprise network setup",
     "CCTV, IPTV and structured cabling",
+    "Custom CBT and school software systems",
     "Professional documentation and support",
-    "Fast response for technical faults"
+    "Fast response for technical faults",
+    "Web and enterprise application development"
   ];
 
   return (
@@ -43,7 +50,7 @@ export default function App() {
             <div className="w-10 h-10 rounded-2xl bg-cyan-400 text-slate-950 flex items-center justify-center font-black">FV</div>
             <div>
               <h1 className="font-bold leading-tight">Firmvision Technologies</h1>
-              <p className="text-xs text-cyan-300">Fiber • Network • Security</p>
+              <p className="text-xs text-cyan-300">Fiber • Network • Security • Software</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
@@ -66,10 +73,10 @@ export default function App() {
               <ShieldCheck className="w-4 h-4" /> Reliable Digital Infrastructure
             </p>
             <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6">
-              Fiber, Network, CCTV & IPTV Solutions for Modern Businesses
+              Fiber, Network, CCTV & Software Solutions for Modern Businesses
             </h2>
             <p className="text-lg text-slate-300 max-w-xl mb-8">
-              Firmvision Technologies delivers professional fiber optic installation, enterprise networking, surveillance systems and IPTV infrastructure for homes, schools, churches, hotels and organizations.
+              Firmvision Technologies delivers professional fiber optic installation, enterprise networking, surveillance systems, IPTV infrastructure and custom software development for homes, schools, churches, hotels and organizations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="bg-cyan-400 text-slate-950 px-7 py-4 rounded-2xl font-bold text-center hover:bg-cyan-300 transition">
@@ -84,7 +91,7 @@ export default function App() {
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="relative">
             <div className="rounded-[2rem] bg-white/10 border border-white/10 p-6 shadow-2xl backdrop-blur">
               <div className="grid grid-cols-2 gap-4">
-                {["FTTH Installation", "Fusion Splicing", "OTDR Testing", "CCTV Setup", "UniFi / MikroTik", "IPTV Platform"].map((item) => (
+                {["FTTH Installation", "Fusion Splicing", "OTDR Testing", "CCTV Setup", "CBT Software", "IPTV Platform"].map((item) => (
                   <div key={item} className="rounded-2xl bg-slate-900/80 border border-white/10 p-5">
                     <CheckCircle2 className="w-6 h-6 text-cyan-300 mb-4" />
                     <p className="font-semibold">{item}</p>
@@ -103,7 +110,7 @@ export default function App() {
             <h3 className="text-3xl md:text-5xl font-black mb-5">Professional technical services built for reliability</h3>
             <p className="text-slate-300">We help clients design, install, troubleshoot and maintain the infrastructure that keeps their business connected and secure.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <motion.div whileHover={{ y: -8 }} key={service.title} className="rounded-3xl bg-slate-950 border border-white/10 p-7 shadow-xl">
                 <div className="text-cyan-300 mb-6">{service.icon}</div>
@@ -150,19 +157,31 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl mb-14">
             <p className="text-cyan-300 font-semibold mb-3">Project Portfolio</p>
-            <h3 className="text-3xl md:text-5xl font-black mb-5">Showcase your completed work</h3>
-            <p className="text-slate-300">Replace these cards with real photos from fiber routes, splice closures, racks, CCTV installations, OTDR traces and server rooms.</p>
+            <h3 className="text-3xl md:text-5xl font-black mb-5">Infrastructure & software projects</h3>
+            <p className="text-slate-300">A selection of our completed infrastructure deployments and software solutions across schools, enterprises and organisations.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {["Campus Fiber Backbone", "CCTV Installation", "Network Rack Setup"].map((project) => (
-              <div key={project} className="rounded-3xl bg-slate-950 border border-white/10 p-6 min-h-56 flex flex-col justify-end">
-                <div className="w-14 h-14 rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center mb-6">
-                  <Cable className="w-7 h-7" />
-                </div>
-                <h4 className="text-xl font-bold mb-2">{project}</h4>
-                <p className="text-slate-400 text-sm">Professional installation, testing, labeling and documentation.</p>
+            <div className="rounded-3xl bg-slate-950 border border-white/10 p-6 min-h-56 flex flex-col justify-end">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center mb-6">
+                <Cable className="w-7 h-7" />
               </div>
-            ))}
+              <h4 className="text-xl font-bold mb-2">Campus Fiber Backbone</h4>
+              <p className="text-slate-400 text-sm">Professional fiber deployment, fusion splicing, OTDR testing and full documentation.</p>
+            </div>
+            <div className="rounded-3xl bg-slate-950 border border-white/10 p-6 min-h-56 flex flex-col justify-end">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center mb-6">
+                <Camera className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold mb-2">CCTV & Security Installation</h4>
+              <p className="text-slate-400 text-sm">IP camera deployment, NVR setup, remote viewing and access control configuration.</p>
+            </div>
+            <div className="rounded-3xl bg-slate-950 border border-white/10 p-6 min-h-56 flex flex-col justify-end">
+              <div className="w-14 h-14 rounded-2xl bg-cyan-400/20 text-cyan-300 flex items-center justify-center mb-6">
+                <Monitor className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold mb-2">CBT Software Development</h4>
+              <p className="text-slate-400 text-sm">Custom Computer Based Testing platforms for schools and educational institutions.</p>
+            </div>
           </div>
         </div>
       </section>
